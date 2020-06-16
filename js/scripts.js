@@ -40,7 +40,7 @@ $(document).ready(function() {
     const deposit = parseFloat($("input#deposit-amount").val());
     const beginningBalance = account.balance;
     account.add(deposit);
-    $("ul#activity").prepend(`<li>${new Date().toDateString()} Deposit: ${beginningBalance.toFixed(2)} + ${deposit} = ${account.balance.toFixed(2)}</li>`);
+    $("table#output").append(`<tr><td>${new Date().toDateString()}</td> <td>Deposit</td> <td>${beginningBalance.toFixed(2)}</td> <td>${deposit}</td> <td>${account.balance.toFixed(2)}</td></tr>`);
 
     displayAccountDetails(account);;
   });
@@ -49,7 +49,7 @@ $(document).ready(function() {
     const withdrawal = parseFloat($("input#withdrawal-amount").val());
     const beginningBalance = account.balance;
     account.sub(withdrawal);
-    $("ul#activity").prepend(`<li>${new Date().toDateString()} Withdrawal: ${beginningBalance.toFixed(2)} - ${withdrawal} = ${account.balance.toFixed(2)}</li>`);
+    $("table#output").append(`<tr><td>${new Date().toDateString()}</td> <td>Withdrawal</td> <td>${beginningBalance.toFixed(2)}</td> <td>${withdrawal}</td> <td>${account.balance.toFixed(2)}</td></tr>`);;
 
     displayAccountDetails(account);
   });
