@@ -19,26 +19,31 @@
         <input id="last-name" class="form-control" type="text">
         <label for="initial-deposit">Initial Deposit:</label>
         <input id="initial-deposit" class="form-control" type="number">
-        <br>
         <button id="create" class="btn">Create Account</button>
       </form>
       <br>
     </div>
     <div class="container hide">
       <h5><span id="name-output"></span>, your current balance is: $<span id="balance-output"></span></h5>
-      <form id="deposit">
-        <label for="deposit-amount">Deposit Amount:</label>
-        <input id="deposit-amount" class="form-control" type="number">
-        <button id="add" class="btn">Deposit Funds</button>
-      </form>
-      <form id="withdrawal">
-        <label for="withdrawal-amount">Withdrawal Amount:</label>
-        <input id="withdrawal-amount" class="form-control" type="number">
-        <button id="subtract" class="btn">Withdraw Funds</button>
-      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="deposit">
+            <label for="deposit-amount">Deposit Amount:</label>
+            <input id="deposit-amount" class="form-control" type="number">
+            <button id="add" class="btn">Deposit Funds</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <form id="withdrawal">
+            <label for="withdrawal-amount">Withdrawal Amount:</label>
+            <input id="withdrawal-amount" class="form-control" type="number">
+            <button id="subtract" class="btn">Withdraw Funds</button>
+          </form>
+        </div>
+      </div>
     </div>
     <div class="container hide">
-      <h6>Account Activity</h6>
+      <h5>Account Activity</h5>
         <ul id="activity">
         </ul>
     </div>
